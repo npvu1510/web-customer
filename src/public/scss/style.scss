@@ -1,0 +1,32 @@
+@import "/theme/variable";
+@import "/theme/mixins";
+
+@import "/theme/base";
+@import "/theme/header";
+@import "/theme/hero";
+@import "/theme/home-page";
+@import "/theme/product";
+@import "/theme/shop";
+@import "/theme/shop-details";
+@import "/theme/footer";
+@import "/theme/breadcrumb";
+@import "/theme/about";
+@import "/theme/shopping-cart";
+@import "/theme/checkout";
+@import "/theme/blog";
+@import "/theme/blog-sidebar";
+@import "/theme/blog-details";
+@import "/theme/contact";
+@import "/theme/responsive";
+
+////Common
+@import 'theme/_extend.scss';
+@import 'theme/_fonts.scss';
+@import 'theme/_minxi.scss';
+@import 'theme/_variables.scss';
+@import 'theme/_global.scss';
+
+////layout
+@import 'layout/main.scss';
+
+@import 'layout/responsive.scss';

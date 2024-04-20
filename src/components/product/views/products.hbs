@@ -1,0 +1,191 @@
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-option">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="breadcrumb__text">
+          <h4>Shop</h4>
+          <div class="breadcrumb__links">
+            <a href="/">Home</a>
+            <span>Shop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Breadcrumb Section End -->
+<!-- Shop Section Begin -->
+<section class="shop spad" style="background:white;">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="shop__sidebar">
+          <div class="shop__sidebar__search">
+            <div class="d-flex">
+              <input class="form-control" id="myInput" type="text" name="name" placeholder="Search.."
+                     onkeyup="sendData(this)"/>
+              <button class="btn btn-outline-secondary"
+                      style="height: 38px; border:1px solid lightgray; border-radius: 0 5px 5px 0;"
+                      onclick="getProductByField(document.getElementById('myInput').value,'name')"
+                      type="button"><i class="fa fa-search"></i></button>
+            </div>
+
+            <ul class="list-group" id="myList">
+
+            </ul>
+          </div>
+          <div class="shop__sidebar__accordion">
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div class="card-heading">
+                  <a data-toggle="collapse" data-target="#collapseOne">Categories</a>
+                </div>
+                <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="shop__sidebar__categories">
+                      <ul class="nice-scroll">
+                        <button type="button"
+                                onclick="getProductByField('Accessories','category')"
+                                class="btn btn-light">Accessories
+                        </button>
+                        <button type="button" onclick="getProductByField('Bags','category')"
+                                class="btn btn-light">Bags
+                        </button>
+                        <button type="button" onclick="getProductByField('Clothing','category')"
+                                class="btn btn-light">Clothing
+                        </button>
+                        <button type="button" onclick="getProductByField('Shoes','category')"
+                                class="btn btn-light">Shoes
+                        </button>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-heading">
+                  <a data-toggle="collapse" data-target="#collapseTwo">Branding</a>
+                </div>
+                <div id="collapseTwo" class="collapse show" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="shop__sidebar__brand">
+                      <ul>
+                        <button type="button" onclick="getProductByField('Levi’s cool', 'brand',1)"
+                                class="btn btn-light">Levi’s cool
+                        </button>
+                        <br>
+                        <button type="button" onclick="getProductByField('The Simpsons', 'brand',1)"
+                                class="btn btn-light">The Simpsons
+                        </button>
+                        <br>
+                        <button type="button" onclick="getProductByField('Levi’s Fresh', 'brand',1)"
+                                class="btn btn-light">Levi’s Fresh
+                        </button>
+                        <button type="button" onclick="getProductByField('501 Modern Icons', 'brand',1)"
+                                class="btn btn-light">501 Modern Icons
+                        </button>
+                        <button type="button" onclick="getProductByField('501 Originals', 'brand',1)"
+                                class="btn btn-light">501 Originals
+                        </button>
+                        <button type="button" onclick="getProductByField('Flex Eco Performance', 'brand',1)"
+                                class="btn btn-light">Flex Eco Performance
+                        </button>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-heading">
+                  <a data-toggle="collapse" data-target="#collapseThree">Filter
+                    Price</a>
+                </div>
+                <div id="collapseThree" class="collapse show" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="shop__sidebar__price">
+                      <ul>
+                        <button type="button" name="price" value="0" class="btn btn-light"
+                                onclick="getProductByField(0,'price',1)">
+                          $0 - $50
+                        </button>
+                        <button type="button" name="price" value="50" class="btn btn-light"
+                                onclick="getProductByField(50,'price',1)">
+                          $50 - $100
+                        </button>
+                        <button type="button" name="price" value="100" class="btn btn-light"
+                                onclick="getProductByField(100,'price',1)">$100 - $150
+                        </button>
+                        <button type="button" name="price" value="150" class="btn btn-light"
+                                onclick="getProductByField('150+','price',1)">$150+
+                        </button>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-heading">
+                  <a data-toggle="collapse" data-target="#collapseFour">Size</a>
+                </div>
+                <div id="collapseFour" class="collapse show" data-parent="#accordionExample">
+                  <div class="card-body">
+                    <div class="shop__sidebar__size">
+                      <button type="button" name="size" value="XS" class="btn btn-light"
+                              onclick="getProductByField('XS','size',1)">XS
+                      </button>
+                      <button type="button" name="size" value="S" class="btn btn-light"
+                              onclick="getProductByField('S','size',1)">S
+                      </button>
+                      <button type="button" name="size" value="M" class="btn btn-light"
+                              onclick="getProductByField('M','size',1)">M
+                      </button>
+                      <button type="button" name="size" value="L" class="btn btn-light"
+                              onclick="getProductByField('L','size',1)">L
+                      </button>
+                      <button type="button" name="size" value="XL" class="btn btn-light"
+                              onclick="getProductByField('XL','size',1)">XL
+                      </button>
+                      <button type="button" name="size" value="2XL" class="btn btn-light"
+                              onclick="getProductByField('2XL','size',1)">
+                        2XL
+                      </button>
+                      <button type="button" name="size" value="3XL" class="btn btn-light"
+                              onclick="getProductByField('3XL','size',1)">
+                        3XL
+                      </button>
+                      <button type="button" name="size" value="3XL" class="btn btn-light"
+                              onclick="getProductByField('4XL','size',1)">
+                        4XL
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="shop__product__option" id="stat-end">
+
+        </div>
+
+        <div class="row" id="product-list">
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination" style="display: flex; justify-content: right;" id="pagination">
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/vendors/jquery/jquery-3.3.1.min.js"></script>
+  <script src="/js/productAjax.js"></script>
+</section>

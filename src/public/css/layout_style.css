@@ -1,0 +1,49 @@
+.avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50% !important;
+}
+
+
+.dropdown-avatar {
+    background-color: transparent;
+    border-width: 0px;
+    color: white;
+}
+
+.dropdown-avatar:hover {
+    color: lightgray;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border-width:0px;
+    border-bottom: 1px solid gray;
+    border-radius: 0px;
+}
+
+.form-control {
+    border-radius: 0px;
+}
+
+.fa-eye-slash, .fa-eye {
+    color: lightgray;
+}
+
+.fa-eye-slash:hover, .fa-eye:hover {
+    cursor: pointer;
+    color: gray;
+}
+
+.signup-image-link:hover {
+    color: gray;
+}
+
+.alert-success{
+    background-color: green !important;
+}
+
+.card-img-top {
+    height: 380px !important;
+    object-fit: contain;
+}

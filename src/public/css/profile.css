@@ -1,0 +1,218 @@
+*{
+    font-family: "Nunito Sans", sans-serif;
+}
+body {
+    background-color: #f9f9fa
+}
+
+h6{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.padding {
+    padding: 3rem 0rem 3rem 0rem !important
+}
+
+.user-card-full {
+    overflow: hidden
+}
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    border: none;
+    margin-bottom: 30px
+}
+
+.m-r-0 {
+    margin-right: 0px
+}
+
+.m-l-0 {
+    margin-left: 0px
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px
+}
+
+/*.bg-c-lite-green {
+    background: -webkit-gradient(linear, left top, right top, from(#f29263), to(#ee5a6f));
+    background: linear-gradient(to right, #ee5a6f, #f29263)
+}*/
+
+/* .user-profile {
+    padding: 20px 0;
+    background: url("https://giaiphapexcel.net/wp-content/uploads/2022/03/background-duong-pho-buon_081746696.jpeg") no-repeat center center ;
+} */
+
+.card-block {
+    padding: 1.25rem
+}
+
+.m-b-25 {
+    margin-bottom: 25px
+}
+
+.img-radius {
+    border-radius: 5px
+}
+
+h6 {
+    font-size: 14px
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px
+    }
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.text-muted {
+    color: #919aa3 !important
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.f-w-600 {
+    font-weight: 600
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.user-card-full .social-link li {
+    display: inline-block;
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+}
+
+.sub-btn {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 343;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    color: #ffffff;
+    background: #000000;
+    letter-spacing: 2px;
+}
+
+#img-container {
+    overflow: hidden;
+}
+
+#profile-avatar
+{
+    width: 100%;
+    object-fit: cover;
+
+}
+
+#profile-avatar:hover {
+    transform: scale(1.1);
+    transition: 1s all ease;
+}
+
+
+.profile-header-section
+{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.profile-header-field{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.current-info:hover i
+{
+    transition: 0.25s;
+    opacity: 0.9;
+}
+
+.current-info i
+{
+    position: relative;
+    left: 10px;
+    opacity: 0.1;
+}
+
+.container .edit-form
+{
+    padding: 0px;
+}
+
+.edit-input
+{
+    width: 55%;
+    font-size: 12px;
+}
+
+.container .edit-form .sub-btn{
+    position: relative;
+    left: 5px;
+}
+
+.fa-pen-to-square:hover {
+    cursor: pointer;
+}
+
+.input-group-text {
+    border: 1px solid lightgray;
+}

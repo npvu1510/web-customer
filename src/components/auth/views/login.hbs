@@ -1,0 +1,107 @@
+<!-- Sing in  Form -->
+<section class="sign-in">
+	<div class="container">
+		<div class="signin-content">
+			<div class="signin-image">
+				<figure><img src="/img/auth/signin-image.jpg" alt="sing up image"></figure>
+				<a href="/auth/register" class="signup-image-link">Create an account</a>
+			</div>
+
+			<div class="signin-form">
+				<h2 class="form-title">Sign In</h2>
+				<form action="/auth/login" method="POST" class="register-form" id="login-form">
+					<div class="form-group">
+						<label id="username-check" for="your_name"><i
+								class="zmdi zmdi-account material-icons-name"></i></label>
+						<input type="text" name="username" id="your_name" placeholder="Your Username"
+							onkeyup="checkUsername(this)" />
+					</div>
+
+					<div class="form-group mb-2 d-flex">
+						<label for="your_pass">
+							<i class="zmdi zmdi-lock "></i>
+						</label>
+						<input type="password" name="password" id="your_pass" placeholder="Password" />
+						<span class="pt-2" style="border-bottom: 1px solid gray;">
+							<i class="far fa-eye-slash" id="togglePassword-passwd"></i>
+						</span>
+					</div>
+					{{#if message}}
+					{{#if state}}
+					<p style="color: green;">{{message}}</p>
+					{{else}}
+					<p style="color: red;">{{message}}</p>
+					{{/if}}
+					{{/if}}
+					<a class="btn btn-light w-100 mt-4  mb-0" href="/google/login" value="google">
+						<img src="/img/auth/google.png" style="width: 25px; height: 25px;" alt="sing up image">
+						Login with Google
+					</a>
+					<div class="form-group form-button">
+						<input type="submit" name="signin" id="signin" class="form-submit" value="Login" />
+					</div>
+
+
+					<a href="#" class="signup-image-link" onclick="$('#forgot-pass-form').submit()" data-toggle="modal"
+						data-target="#exampleModal">
+						Forgot password?
+					</a>
+
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">Forgot Password</h5>
+									<button type="button" class="close" id="close-rs" data-dismiss="modal"
+										aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body" id="body-rs">
+									<div class="input-group-prepend">
+										<div class="input-group-prepend">
+											<span class="input-group-text" id="username-check-rs">
+												<i class="zmdi zmdi-account material-icons-name"></i>
+											</span>
+										</div>
+										<input type="text" class="form-control" placeholder="Username"
+											aria-label="Username" id="username-rs" aria-describedby="basic-addon1"
+											onkeyup="checkUsernameReset(this)">
+									</div>
+
+								</div>
+								<div class="modal-footer" id="btn-rs">
+									<button type="button" class="btn btn-primary" onclick="resetPass()">Reset Password
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+</section>
+
+{{!-- show - hide password --}}
+<script>
+	const togglePassword = document.querySelector("#togglePassword-passwd");
+	const password = document.querySelector("#your_pass");
+
+	togglePassword.addEventListener("click", function () {
+		// toggle the type attribute
+		const type = password.getAttribute("type") === "password" ? "text" : "password";
+		password.setAttribute("type", type);
+		// toggle the eye icon
+		this.classList.toggle('fa-eye');
+		this.classList.toggle('fa-eye-slash');
+
+	});
+</script>
+
+<script src="/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script src="/js/loginAjax.js"></script>

@@ -1,0 +1,81 @@
+.tab-pane h3
+{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#review-form h5
+{
+    margin-top: 20px;
+}
+
+#review-right-tab
+{
+    padding-left: 120px;
+    height: 400px;
+}
+
+#review-list
+{
+    height: 340px;
+}
+
+.review-box
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.review-box h5
+{
+    font-weight: bold;
+}
+
+.review-box .review-user-avatar img
+{
+    width: 48px;
+    height: 48px;
+    margin-right: 20px;
+}
+
+.review-box span
+{
+    font-size:10px;
+    font-weight: lighter;
+    font-style: italic;
+    color: gray;
+    position: relative;
+    top:-20px
+}
+
+#review-form input
+{
+    width: 100%;
+}
+
+#review-content
+{
+    height: 120px;
+}
+
+.product__details__tab__content__item p {
+    margin-bottom: 0;
+}
+
+#empty-review-list
+{
+    text-align: center;
+    padding-top: 70px
+}
+
+#empty-review-list p
+{
+    font-weight: bold;
+    font-size: 20px
+}
+
+#review-pagination
+{
+    text-align: center;
+}
+

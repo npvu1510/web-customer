@@ -1,0 +1,87 @@
+<!-- Sign up form -->
+<section class="signup">
+	<div class="container">
+		<div class="signup-content p-5">
+			<div class="signup-form m-0">
+				<h2 class="form-title">Sign up</h2>
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">
+							<i class="zmdi zmdi-account material-icons-name"></i>
+						</span>
+					</div>
+					<input type="text" class="form-control" placeholder="Username" aria-label="Username" name="username"
+						id="username" aria-describedby="basic-addon1" onkeyup="checkUsername(this)">
+				</div>
+
+				<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text">
+							<i class="zmdi zmdi-email"></i>
+						</span>
+					</div>
+					<input type="email" class="form-control" id="gmail" placeholder="Email" name="email"
+						onkeyup="checkGmail(this)" aria-describedby="basic-addon1">
+				</div>
+
+				<div class="input-group mb-5">
+					<div class="input-group-prepend">
+						<span class="input-group-text">
+							<i class="zmdi zmdi-lock"></i>
+						</span>
+					</div>
+					<input type="password" class="form-control" placeholder="Password" name="password" id="passwd"
+						aria-describedby="basic-addon1" onkeyup="checkPassword(this)">
+					<div class="input-group-append">
+						<span class="input-group-text">
+							<i class="far fa-eye-slash" id="togglePassword-passwd"></i>
+						</span>
+					</div>
+					<div id="error"></div>
+				</div>
+				{{#if message}}
+				{{#if state}}
+				<div class="alert alert-success" role="alert">
+					{{message}}
+				</div>
+				{{else}}
+				<div class="alert alert-danger" role="alert">
+					{{message}}
+				</div>
+				{{/if}}
+				{{/if}}
+				<a class="btn btn-light w-100 mb-0" href="/google/register">
+					<img src="/img/auth/google.png" style="width: 25px; height: 25px;" alt="sing up image">
+					Sign up with Google
+				</a>
+
+				<div class="form-group form-button">
+					<input type="submit" name="signup" id="signup" onclick="signUp()" class="form-submit"
+						value="Register" />
+				</div>
+			</div>
+			<div class="signup-image">
+				<figure><img src="/img/auth/signup-image.jpg" alt="sing up image"></figure>
+				<a href="/auth/login" class="signup-image-link">I am already member</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+{{!-- show - hide password --}}
+<script>
+	const togglePassword = document.querySelector("#togglePassword-passwd");
+	const password = document.querySelector("#passwd");
+
+	togglePassword.addEventListener("click", function () {
+		// toggle the type attribute
+		const type = password.getAttribute("type") === "password" ? "text" : "password";
+		password.setAttribute("type", type);
+		// toggle the eye icon
+		this.classList.toggle('fa-eye');
+		this.classList.toggle('fa-eye-slash');
+
+	});
+</script>
+<script src="/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script src="/js/registerAjax.js"></script>

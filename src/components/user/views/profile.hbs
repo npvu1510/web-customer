@@ -1,0 +1,240 @@
+<section>
+	<div class="container">
+		<div class="page-content page-container" id="page-content">
+			<div class="padding">
+				<div class="row container d-flex justify-content-center">
+					<div class="col-xl-12 col-md-12">
+						<div class="card user-card-full">
+							<div class="row mx-0" style="height: 600px;">
+								<div class="col-sm-4 p-0" id="img-container">
+									<img id="profile-avatar" src="" class="img-radius mb-4" alt="User-Profile-Image">
+
+									<div class="mx-auto w-75 mb-3">
+										<button type="button" class="btn btn-primary px-4 w-100" style="height:50px;"
+											data-toggle="modal" data-target="#modalChangeAvatar">
+											Change avatar
+										</button>
+									</div>
+									<form action="/user/profile/change-avatar" method="POST" id="change-avatar-form"
+										enctype="multipart/form-data">
+										<div class="modal fade" id="modalChangeAvatar" tabindex="-1"
+											aria-labelledby="modalChangeAvatar" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="exampleModalLabel">Change avatar
+														</h5>
+													</div>
+													<div class="modal-body">
+														<b>Avatar:</b>
+														<input type="file" id="input-product-image"
+															class="form-control p-0 pt-1" name="avatar_url"
+															accept=".jpg,.jpeg,.png">
+														<div class="w-100 d-flex flex-row justify-content-end mt-3">
+															<button type="reset" id="cancle-btn"
+																class="btn btn-secondary me-2" data-dismiss="modal"
+																aria-label="Close">Cancle
+															</button>
+															<button type="submit" id="submit-img-btn"
+																class="ml-2 btn btn-primary">
+																Submit
+															</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+
+									<input type="hidden" id="username" />
+									<div class="mx-auto w-75 mb-5">
+										<button type="button" data-toggle="modal" data-target="#exampleModal"
+											class="btn btn-primary px-4 w-100" style="height:50px;">
+											Change password
+										</button>
+									</div>
+
+									<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+										aria-labelledby="exampleModalLabel" aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalLabel"><strong>Change
+															password</strong></h5>
+													<button type="button" class="close" data-dismiss="modal"
+														aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body" id="modal-body">
+													<label for="usr">Password:</label>
+													<div class="form-group mb-2 d-flex">
+														<input type="password" class="form-control" id="password">
+														<span class="pt-2">
+															<i class="far fa-eye-slash" id="togglePassword-passwd"></i>
+														</span>
+													</div>
+												</div>
+												<div class="modal-footer" id="profile-btn">
+													<button type="button" class="btn btn-secondary"
+														data-dismiss="modal">Close</button>
+													<button type="button" id="change-password" class="btn btn-primary"
+														onclick="changePasswordForm()">Change password</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-8">
+									<div class="card-block">
+										<h6 class="m-b-20 p-b-5 b-b-default f-w-600 profile-header-section">General</h6>
+										<div class="row">
+											<div class="col-sm-6 fullname">
+												<p class="m-b-10 f-w-600 profile-header-field">Full Name</p>
+												<div class="current-info" style="display: flex; flex-direction: row;">
+													<h6 class="text-muted f-w-400" id="fullname"></h6>
+													<i class="fa-solid fa-pen-to-square"
+														onclick="showForm('fullname')"></i>
+												</div>
+												<form method="post" class="edit-form" style="display: none">
+													<div class="container edit-form">
+														<input class="edit-input" type="text" name="fullname">
+														<input type="submit" value="Apply" class="sub-btn"
+															onclick="edit('fullname')">
+													</div>
+												</form>
+											</div>
+											<div class="col-sm-6">
+												<p class="m-b-10 f-w-600 profile-header-field">Role</p>
+												<div class="current-info">
+													<h6 class="text-muted f-w-400" id="role"></h6>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<p class="mt-2 m-b-10 f-w-600 profile-header-field">Username</p>
+												<div class="current-info">
+													<h6 class="text-muted f-w-400" id="profile-username"></h6>
+												</div>
+											</div>
+										</div>
+
+										<h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 profile-header-section">
+											Detail</h6>
+										<div class="row">
+											<div class="col-sm-6">
+												<p class="m-b-10 f-w-600 profile-header-field">Employed</p>
+												<div class="current-info">
+													<h6 class="text-muted f-w-400" id="employed"></h6>
+												</div>
+											</div>
+											<div class="col-sm-6 intro">
+												<p class="m-b-10 f-w-600 profile-header-field">Introduction</p>
+												<div class="current-info" style="display: flex; flex-direction: row;">
+													<h6 class="text-muted f-w-400" id="intro"></h6>
+													<i class="fa-solid fa-pen-to-square"
+														onclick="showForm('intro')"></i>
+												</div>
+												<form method="post" class="edit-form" style="display: none">
+													<div class="container edit-form">
+														<input class="edit-input" type="text" name="intro">
+														<input type="submit" value="Apply" class="sub-btn"
+															onclick="edit('intro')">
+													</div>
+												</form>
+											</div>
+										</div>
+
+
+										<h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600 profile-header-section">
+											Contact</h6>
+										<div class="row">
+											<div class="col-sm-6 phone">
+												<p class="m-b-10 f-w-600 profile-header-field">Phone</p>
+												<div class="current-info" style="display: flex; flex-direction: row;">
+													<h6 class="text-muted f-w-400" id="phone"></h6>
+													<i class="fa-solid fa-pen-to-square"
+														onclick="showForm('phone')"></i>
+												</div>
+												<form method="post" class="edit-form" style="display: none">
+													<div class="container edit-form">
+														<input class="edit-input" type="text" name="phone"
+															onkeyup="checkPhone(this)">
+														<span id="phone-btn">
+															<input type="submit" value="Apply" class="sub-btn"
+																id="phone-btn" onclick="edit('phone')">
+														</span>
+													</div>
+													<div id="phone-error"></div>
+												</form>
+											</div>
+											<div class="col-sm-6">
+												<p class="m-b-10 f-w-600 profile-header-field">Email</p>
+												<div class="current-info pr-4">
+													<h6 class="text-muted f-w-400 w-100" id="email"></h6>
+												</div>
+											</div>
+										</div>
+										<div class="row mt-2">
+											<div class="col-sm-6 address">
+												<p class="m-b-10 f-w-600 profile-header-field">Address</p>
+												<div class="current-info" style="display: flex; flex-direction: row;">
+													<h6 class="text-muted f-w-400" id="address"></h6>
+													<i class="fa-solid fa-pen-to-square"
+														onclick="showForm('address')"></i>
+												</div>
+												<form method="post" class="edit-form" style="display: none">
+													<div class="container edit-form">
+														<input class="edit-input" type="text" name="address">
+														<input type="submit" value="Apply" class="sub-btn"
+															onclick="edit('address')">
+													</div>
+												</form>
+											</div>
+										</div>
+
+
+										<ul class="social-link list-unstyled m-t-40 m-b-10">
+											<li><a href="#!" data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="facebook" data-abc="true"><i
+														class="mdi mdi-facebook feather icon-facebook facebook"
+														aria-hidden="true"></i></a></li>
+											<li><a href="#!" data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="twitter" data-abc="true"><i
+														class="mdi mdi-twitter feather icon-twitter twitter"
+														aria-hidden="true"></i></a></li>
+											<li><a href="#!" data-toggle="tooltip" data-placement="bottom" title=""
+													data-original-title="instagram" data-abc="true"><i
+														class="mdi mdi-instagram feather icon-instagram instagram"
+														aria-hidden="true"></i></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<script>
+	const togglePassword = document.querySelector("#togglePassword-passwd");
+	const password = document.querySelector("#password");
+
+	togglePassword.addEventListener("click", function () {
+		// toggle the type attribute
+		const type = password.getAttribute("type") === "password" ? "text" : "password";
+		password.setAttribute("type", type);
+		// toggle the eye icon
+		this.classList.toggle('fa-eye');
+		this.classList.toggle('fa-eye-slash');
+
+	});
+</script>
+
+<script src="/js/userAjax.js"></script>

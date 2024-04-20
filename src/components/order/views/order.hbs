@@ -1,0 +1,104 @@
+<style>
+	#place-order-announce {
+		text-align: center;
+		font-size: 20px;
+		font-weight: 600;
+		color: red;
+		margin-top: 10px;
+
+	}
+</style>
+
+<!-- Breadcrumb Section Begin -->
+<section class="breadcrumb-option">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="breadcrumb__text">
+					<h4>Check Out</h4>
+					<div class="breadcrumb__links">
+						<a href="/">Home</a>
+						<a href="/product">Shop</a>
+						<span>Check Out</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Breadcrumb Section End -->
+
+<!-- Checkout Section Begin -->
+<section class="checkout spad">
+	<div class="container">
+		<div class="checkout__form">
+			<div class="row">
+				<div class="col-lg-7 col-md-6">
+					<h6 class="coupon__code"><span class="icon_tag_alt"></span> Have a coupon? <a href="/cart">Click
+							here</a> to enter your code</h6>
+					<h6 class="checkout__title">Billing Details</h6>
+					<div class="checkout__input">
+						<p>Full name<span>*</span></p>
+						<input type="text" id="fullname">
+					</div>
+					<div class="checkout__input">
+						<p>Address<span>*</span></p>
+						<input type="text" id="address" placeholder="Street Address" class="checkout__input__add">
+					</div>
+
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="checkout__input">
+								<p>Phone<span>*</span></p>
+								<input type="text" id="phone">
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="checkout__input">
+								<p>Email<span>*</span></p>
+								<input type="text" id="email">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-6">
+					<div class="checkout__order">
+						<h4 class="order__title">Your order</h4>
+						<div class="checkout_order_products_title row">
+							<div class="col-10">
+								Product
+							</div>
+							<div class="col-2">
+								Total
+							</div>
+						</div>
+						<ul class="checkout__total__products" id="checkout-product">
+
+						</ul>
+						<hr>
+						<ul class="checkout_order_products_title">
+							<div class="row">
+								<div class="col-10">
+									Total
+								</div>
+								<div class="product-total col-2 d-flex flex-column align-items-center"
+									id="result-total">
+								</div>
+							</div>
+						</ul>
+						<hr>
+						<p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do eiusmod tempor incididunt
+							ut labore et dolore magna aliqua.</p>
+						<button type="submit" class="site-btn" onclick="placeOrder()">PLACE ORDER</button>
+						<div id="place-order-announce">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Checkout Section End -->
+
+<script src="/js/orderAjax.js"></script>

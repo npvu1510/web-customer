@@ -1,0 +1,19 @@
+.btn-detail {
+    width: 200px;
+    background-color: rgb(231, 231, 231);
+}
+
+.btn-detail:hover {
+    background-color: lightgray;
+}
+
+.status {
+    color: white;
+    width: 120px;
+    height: 30px;
+    border-radius: 7px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

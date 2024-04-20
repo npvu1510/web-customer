@@ -1,0 +1,93 @@
+.add-cart:hover {
+    color: rgb(238, 64, 64);
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.3s all ease;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+}
+
+.alert.success {
+    background-color: #04AA6D;
+}
+
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+#card-body {
+    height: 140px;
+}
+
+#product-name {
+    color: gray;
+}
+
+#product-name:hover {
+    color: black;
+    transition: 0.2s all ease;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card-img-top:hover {
+    transform: scale(1.1);
+    transition: 1s all ease;
+}
+
+.product__details__option__color label:after {
+    left: -3.8px;
+    top: -4px;
+}
+
+.gg-format-slash {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: rotate(25deg) scale(var(--ggs,1));
+    width: 2px;
+    height: 14px;
+    background: currentColor;
+    border-radius: 3px
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    border: 1px solid lightgray;
+    margin: auto;
+    padding: auto;
+    transition: 0.2s all ease;
+}
+
+input[type="radio"]+label:hover {
+    transform: scale(1.1);
+}
+
+
+input[type="radio"]:checked+label:after {
+    border: 1px solid black;
+}
